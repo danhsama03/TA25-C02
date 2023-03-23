@@ -1,15 +1,19 @@
 import {question} from "readline-sync";
 
-let characters: string;
-characters = question("Nhap ki tu:");
+let n: number;
+n = Number(question("Nhap n: "));
+let flag: number = 0;
 
-if (characters >= "a" && characters <= "z") {
-  console.log("Ki tu thuong");
-} else if (characters >= "A" && characters <= "Z") {
-  console.log("Ki tu hoa");
-} else if (Number(characters) >= 0 && Number(characters) <= 9) {
-  console.log("Ki tu so");
+for (let i: number = 0; i <= n; i++) {
+  if (Math.pow(i, 2) == n) {   
+    flag = 1;
+    break;
+  }
+};
+
+if (flag == 1) {
+  console.log("Yes");
 } else {
-  console.log("Ki tu dac biet");
+  console.log("No");
 };
 

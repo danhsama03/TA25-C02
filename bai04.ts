@@ -1,10 +1,14 @@
 import {question} from "readline-sync";
 
-let year: number;
-year = Number(question("Nhap nam:"));
+let n: number;
+n = Number(question("Nhap n: "));
+let dem: number = 0;
 
-if (year % 4 == 0 && year % 100 != 0 && year % 400 != 0) {
-    console.log("Yes");
-} else {
-    console.log("No");
+for (let i: number = 1; i <= n; i++) {
+    if (n % i == 0) {
+        if (i % 2 == 1){
+            dem++;
+        };
+    };
 };
+console.log(dem);

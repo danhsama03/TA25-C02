@@ -1,10 +1,8 @@
 import {question} from "readline-sync";
 
-let mediumScore: number;
-mediumScore = Number(question("Nhap diem trung binh:"));
+let n: number;
+n = Number(question("Nhap n:"));
 
-if (mediumScore >= 5) {
-    console.log("Dau");
-} else {
-    console.log("Rot");
+for (let i: number = 1; i <= n; i++) {
+    console.log("Kmin " + i);
 };

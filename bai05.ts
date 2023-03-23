@@ -1,16 +1,13 @@
 import {question} from "readline-sync";
 
-let kw: number;
-kw = Number(question("Nhap so kw dien:"));
+let n: number;
+n = Number(question("Nhap n: "));
+let dem: number = 0;
 
-if (kw < 200) {
-    const total: number = kw * 2000;
-    console.log(total);
-} else if (100 <= kw && kw < 200) {
-    const total: number = kw * 2500;
-    console.log(total);
-} else {
-    const total: number = kw * 3500;
-    console.log(total);
+for (let i: number = 1; i <= n; i++) {
+    if (n % i == 0) {
+        dem++;
+    };
 };
+console.log(dem);
 
